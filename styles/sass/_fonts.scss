@@ -1,11 +1,11 @@
 
 @font-face {
     font-family: 'NeutraTextBold';
-    src: url('/styles/fonts/NeutraTextBold.eot');
-    src: url('/styles/fonts/NeutraTextBold.eot') format('embedded-opentype'),
-         url('/styles/fonts/NeutraTextBold.woff') format('woff'),
-         url('/styles/fonts/NeutraTextBold.ttf') format('truetype'),
-         url('/styles/fonts/NeutraTextBold.svg#RonniaRegular') format('svg');
+    src: url('../fonts/NeutraTextBold.eot');
+    src: url('../fonts/NeutraTextBold.eot') format('embedded-opentype'),
+         url('../fonts/NeutraTextBold.woff') format('woff'),
+         url('../fonts/NeutraTextBold.ttf') format('truetype'),
+         url('../fonts/NeutraTextBold.svg#RonniaRegular') format('svg');
 }
 
 /*
@@ -13,11 +13,11 @@
 */
 @font-face {
   font-family: 'fontello';
-  src: url('/styles/fonts/fontello.eot?17297495');
-  src: url('/styles/fonts/fontello.eot?17297495#iefix') format('embedded-opentype'),
-       url('/styles/fonts/fontello.woff?17297495') format('woff'),
-       url('/styles/fonts/fontello.ttf?17297495') format('truetype'),
-       url('/styles/fonts/fontello.svg?17297495#fontello') format('svg');
+  src: url('../fonts/fontello.eot?17297495');
+  src: url('../fonts/fontello.eot?17297495#iefix') format('embedded-opentype'),
+       url('../fonts/fontello.woff?17297495') format('woff'),
+       url('../fonts/fontello.ttf?17297495') format('truetype'),
+       url('../fonts/fontello.svg?17297495#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }

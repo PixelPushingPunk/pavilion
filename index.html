@@ -23,11 +23,23 @@
 </head>
 
 <body ng-app='pavApp'>
-	
+		
+		<section id="img-loader">
+			<div class="img-loader-container">
+				<div class="loading">
+					<div class="dot"></div>
+					<div class="dot2"></div>
+				</div>
+				<h1>
+					Loading . . .
+				</h1>
+			</div>
+		</section>
+
 		<section id="img-container">
 
-			<div class="border border-one"></div>
-			<div class="border border-two"></div>
+			<div class="border border-one intro-border"></div>
+			<div class="border border-two intro-border"></div>
 
 			<div class="img intro-slide show">
 				<div class="text-outer">
@@ -64,7 +76,6 @@
 						<span class="i-name"></span>
 					</div>
 
-
 					<h1 class="img-title text-inner btitle-one"><span>The New Benchmark</span><span>of Couture Living</span></h1>
 
 					<h1 class="img-title text-inner btitle-two"><span>By Invitation Only</span> <span class="underline">enquire here</span></h1>
@@ -76,109 +87,154 @@
 
 
 	<script>
-		
-		$(function () {
+		(function () {
 
-			/*
-				Intro
-			*/
-				setTimeout(function () {
+			$.fn.imagesLoaded = function () {
 
-					$('.intro-slide').addClass('show');
-					$('.intro-slide .icon-pavilion').addClass('show');
+			    $imgs = this.find('img[src!=""]');
+			    // if there's no images, just return an already resolved promise
+			    if (!$imgs.length) {return $.Deferred.resolve().promise();}
 
+			    // for each image, add a deferred object to the array which resolves when the image is loaded
+			    var dfds = [];  
+			    $imgs.each(function(){
 
-				}, 500);
+			        var dfd = $.Deferred();
+			        dfds.push(dfd);
+			        var img = new Image();
+			        img.onload = function(){dfd.resolve();}
+			        img.src = this.src;
 
+			    });
 
-			/*
-				Car
-			*/
-				setTimeout(function () {
+			    // return a master promise object which will resolve when all the deferred objects have resolved
+			    // IE - when all the images are loaded
+			    return $.when.apply($,dfds);
 
-					$('.intro-slide').removeClass('show');
-					$('.car').addClass('show');
-					$('.car img').addClass('zoom');
+			}
 
-					setTimeout(function () {
-						
-						$('.intro-slide .icon-pavilion').removeClass('show');
-						$('.car .img-title').addClass('show');
+			$(function () {
 
-					}, 1000);
+				$('#img-loader').show();
+				$('#img-container').hide();
 
-				}, 4000);
+				$('#img-container').imagesLoaded().then(function () {
 
+					//alert('images loaded');
+					$('#img-loader').hide();
+					$('#img-container').show();
 
-			/*
-				Luxury
-			*/
-				setTimeout(function () {
-
-					$('.car').removeClass('show');
-					$('.luxury').addClass('show');
-					$('.luxury img').addClass('zoom');
-
-					setTimeout(function () {
-						$('.car .img-title').removeClass('show');
-						$('.luxury .img-title').addClass('show');
-					}, 1000);
-
-				}, 8000);
-
-
-			/*
-				Distinction
-			*/
-				setTimeout(function () {
-
-					$('.luxury').removeClass('show');
-					$('.distinction').addClass('show');
-					$('.distinction img').addClass('zoom');
-
+				/*
+					Intro
+				*/
 					setTimeout(function () {
 
-						$('.luxury .img-title').removeClass('show');
-						$('.distinction .img-title').addClass('show');
+						$('.intro-slide').addClass('show');
+						$('.intro-slide .icon-pavilion').addClass('show');
 
-					}, 1000);
-
-				}, 12000);
-
-
-			/*
-				Benchmark
-			*/
-				setTimeout(function () {
-
-					$('.distinction').removeClass('show');
-					$('.benchmark').addClass('show');
-					$('.benchmark img').addClass('zoom');
-
-					setTimeout(function () {
-
-						$('.benchmark .icon-pavilion').addClass('show');
 
 					}, 500);
 
+
+				/*
+					Car
+				*/
 					setTimeout(function () {
 
-						$('.distinction .img-title').removeClass('show');
-						$('.benchmark .btitle-one').addClass('show-block').delay(1.2).addClass('show');
+						$('.border').removeClass('.intro-border').addClass('car-border');
 
-					}, 1000);
+						$('.intro-slide').removeClass('show');
+						$('.car').addClass('show');
+						$('.car img').addClass('zoom');
 
-
-					setTimeout(function () {
-
-							$('.benchmark .btitle-one').removeClass('show').delay(1.2).removeClass('show-block');
-							$('.benchmark .btitle-two').addClass('show-block').delay(1.2).addClass('show');
+						setTimeout(function () {
 							
+							$('.intro-slide .icon-pavilion').removeClass('show');
+							$('.car .img-title').addClass('show');
+
+						}, 1000);
+
 					}, 4000);
 
-				}, 16000);
 
-		});
+				/*
+					Luxury
+				*/
+					setTimeout(function () {
+
+						$('.border').removeClass('car-border').addClass('luxury-border');
+
+						$('.car').removeClass('show');
+						$('.luxury').addClass('show');
+						$('.luxury img').addClass('zoom');
+
+						setTimeout(function () {
+							$('.car .img-title').removeClass('show');
+							$('.luxury .img-title').addClass('show');
+						}, 1000);
+
+					}, 8000);
+
+
+				/*
+					Distinction
+				*/
+					setTimeout(function () {
+
+						$('.border').removeClass('luxury-border').addClass('distinction-border');
+
+						$('.luxury').removeClass('show');
+						$('.distinction').addClass('show');
+						$('.distinction img').addClass('zoom');
+
+						setTimeout(function () {
+
+							$('.luxury .img-title').removeClass('show');
+							$('.distinction .img-title').addClass('show');
+
+						}, 1000);
+
+					}, 12000);
+
+
+				/*
+					Benchmark
+				*/
+					setTimeout(function () {
+
+						$('.border').removeClass('distinction-border').addClass('benchmark-border');
+
+						$('.distinction').removeClass('show');
+						$('.benchmark').addClass('show');
+						$('.benchmark img').addClass('zoom');
+
+						setTimeout(function () {
+
+							$('.benchmark .icon-pavilion').addClass('show');
+
+						}, 500);
+
+						setTimeout(function () {
+
+							$('.distinction .img-title').removeClass('show');
+							$('.benchmark .btitle-one').addClass('show-block').delay(1.2).addClass('show');
+
+						}, 1000);
+
+
+						setTimeout(function () {
+
+								$('.benchmark .btitle-one').removeClass('show').delay(1.2).removeClass('show-block');
+								$('.benchmark .btitle-two').addClass('show-block').delay(1.2).addClass('show');
+								
+						}, 4000);
+
+					}, 16000);
+
+				});
+
+			});
+		})();
 
 	</script>
 </body>

@@ -14,6 +14,27 @@
 		// overflow: hidden;
 	}
 
+	#img-loader {
+		position:fixed;
+		top:0;
+		left:0;
+		bottom:0;
+		right:0;
+		background:#000;
+		z-index:9999999;
+		display:block;
+		overflow:hidden;
+
+		.img-loader-container {
+			min-height:3000px
+		}
+
+		h1 {
+			color:#fff;
+			text-align:center;
+		}
+	}
+
 	.border {
 		
 		border:1px solid #ba8748;
@@ -35,6 +56,26 @@
 			height:90%;
 		}
 
+		&.intro-border {
+			border:1px solid #FEF5A8;
+		}
+
+		&.car-border {
+			border:1px solid #FEF292;
+		}
+
+		&.luxury-border {
+			border:1px solid #B6976A;
+		}
+
+		&.distinction-border {
+			border:1px solid #F4F2FB;
+		}
+
+		&.benchmark-border {
+			border:1px solid #F4F2FB;
+		}
+
 	}
 
 	.icon-pavilion {
@@ -46,12 +87,14 @@
 		display:block !important;
 
 		&.intro {
-			color:#fff;
+			color:#ffa357;
 			top:46%;
 			left:51%;
 			margin-left:-250px;
 			font-size:10em;
 			max-width:500px;
+
+			text-shadow:0 0 1px rgba(105, 32, 3, 0.9);
 		}
 
 		&.last {
@@ -105,12 +148,16 @@
 		    }
 
 			&.intro-slide {
-				background: linear-gradient(270deg, #cf9c0b, #ffffff);
-				background-size: 400% 400%;
+				// background: linear-gradient(270deg, #cf9c0b, #ffffff);
+				// background: linear-gradient(270deg, #fcc98d, #f6a368, #ec753c, #993f18, #6a2003, #b75325, #e67239);
 
-				-webkit-animation: AnimationName 7s ease infinite;
-				-moz-animation: AnimationName 7s ease infinite;
-				animation: AnimationName 7s ease infinite;
+				background: linear-gradient(270deg, #e67239, #b75325, #6a2003, #993f18,  #ec753c, #f6a368, #fcc98d);
+
+background-size: 1400% 1400%;
+
+				-webkit-animation: AnimationName 12s ease infinite;
+				-moz-animation: AnimationName 12s ease infinite;
+				animation: AnimationName 12s ease infinite;
 			}
 
 		 	.img-title {

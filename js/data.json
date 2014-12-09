@@ -1,0 +1,13 @@
+[
+	{
+		"slide" : "intro-slide",
+		"pavilion": true,
+		"pavilion-sec": "intro",
+	},
+	{
+		"slide" : "car",
+		"pavilion": false,
+	}
+]
+
+//Dentsu@KL
