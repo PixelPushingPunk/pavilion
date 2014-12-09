@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pavilion Suites</title>
+
+<!-- 
+<script src="http://code.createjs.com/easeljs-0.7.1.min.js"></script>
+<script src="http://code.createjs.com/tweenjs-0.5.1.min.js"></script>
+<script src="http://code.createjs.com/movieclip-0.7.1.min.js"></script>
+<script src="http://code.createjs.com/preloadjs-0.4.1.min.js"></script>
+<script src="animation2.js"></script>  
+-->
+
+<script src="js/libs/modernizr/modernizr.js"/></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.6/angular.min.js"></script>
+<script src="js/libs/angular/app.js"/></script>
+
+<link rel="stylesheet" href="styles/css/core.css"/>
+
+</head>
+
+<body ng-app='pavApp'>
+	
+		<section id="img-container">
+
+			<div class="border border-one"></div>
+			<div class="border border-two"></div>
+
+			<div class="img intro-slide show">
+				<div class="text-outer">
+					<div class="icon-pavilion intro text-inner">
+						<i class="icon-logo"></i> 
+						<span class="i-name"></span>
+					</div>
+				</div>
+			</div>
+			<div class="img car">
+		  		<img src="images/car.png" alt=""/>
+		  		<div class="text-outer">
+		  			<h1 class="img-title text-inner ">Presitige</h1>
+		  		</div>
+			</div>
+			<div class="img luxury">
+				<img src="images/luxury.jpg" alt=""/>
+				<div class="text-outer">
+		  			<h1 class="img-title text-inner ">Luxury</h1>
+		  		</div>
+			</div>
+			<div class="img distinction">
+				<img src="images/distinction.jpg" alt=""/>
+				<div class="text-outer">
+		  			<h1 class="img-title text-inner">Distinction</h1>
+		  		</div>
+			</div>
+			<div class="img benchmark">
+				<img src="images/benchmark.jpg" alt=""/>
+				
+				<div class="text-outer">
+					<div class="icon-pavilion last text-inner">
+						<i class="icon-logo"></i> 
+						<span class="i-name"></span>
+					</div>
+
+
+					<h1 class="img-title text-inner btitle-one"><span>The New Benchmark</span><span>of Couture Living</span></h1>
+
+					<h1 class="img-title text-inner btitle-two"><span>By Invitation Only</span> <span class="underline">enquire here</span></h1>
+
+				</div>
+			</div>
+
+		</section>
+
+
+	<script>
+		
+		$(function () {
+
+			/*
+				Intro
+			*/
+				setTimeout(function () {
+
+					$('.intro-slide').addClass('show');
+					$('.intro-slide .icon-pavilion').addClass('show');
+
+
+				}, 500);
+
+
+			/*
+				Car
+			*/
+				setTimeout(function () {
+
+					$('.intro-slide').removeClass('show');
+					$('.car').addClass('show');
+					$('.car img').addClass('zoom');
+
+					setTimeout(function () {
+						
+						$('.intro-slide .icon-pavilion').removeClass('show');
+						$('.car .img-title').addClass('show');
+
+					}, 1000);
+
+				}, 4000);
+
+
+			/*
+				Luxury
+			*/
+				setTimeout(function () {
+
+					$('.car').removeClass('show');
+					$('.luxury').addClass('show');
+					$('.luxury img').addClass('zoom');
+
+					setTimeout(function () {
+						$('.car .img-title').removeClass('show');
+						$('.luxury .img-title').addClass('show');
+					}, 1000);
+
+				}, 8000);
+
+
+			/*
+				Distinction
+			*/
+				setTimeout(function () {
+
+					$('.luxury').removeClass('show');
+					$('.distinction').addClass('show');
+					$('.distinction img').addClass('zoom');
+
+					setTimeout(function () {
+
+						$('.luxury .img-title').removeClass('show');
+						$('.distinction .img-title').addClass('show');
+
+					}, 1000);
+
+				}, 12000);
+
+
+			/*
+				Benchmark
+			*/
+				setTimeout(function () {
+
+					$('.distinction').removeClass('show');
+					$('.benchmark').addClass('show');
+					$('.benchmark img').addClass('zoom');
+
+					setTimeout(function () {
+
+						$('.benchmark .icon-pavilion').addClass('show');
+
+					}, 500);
+
+					setTimeout(function () {
+
+						$('.distinction .img-title').removeClass('show');
+						$('.benchmark .btitle-one').addClass('show-block').delay(1.2).addClass('show');
+
+					}, 1000);
+
+
+					setTimeout(function () {
+
+							$('.benchmark .btitle-one').removeClass('show').delay(1.2).removeClass('show-block');
+							$('.benchmark .btitle-two').addClass('show-block').delay(1.2).addClass('show');
+							
+					}, 4000);
+
+				}, 16000);
+
+		});
+
+	</script>
+</body>
+</html>
