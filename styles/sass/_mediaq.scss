@@ -1,0 +1,48 @@
+
+
+
+	@media screen and (orientation:landscape) {
+		#canvas {
+			width: 100%;
+		}
+	}
+	@media screen and (orientation:portrait) {
+		#canvas {
+			position: absolute;;
+		    left: -9999px;
+		    right: -9999px;
+		    margin: auto;
+		}
+	}
+
+	@media screen and (max-width:768px) {
+
+		// pavilion image size
+		.icon-pavilion {
+
+			&.intro {
+
+				font-size:5em;
+				color: #ffa357;
+				top: 46%;
+				left: 51%;
+				margin-left: -118px;
+				max-width: 236px;
+				text-shadow: 0 0 1px rgba(105,32,3,0.9);
+
+			}
+
+		}
+
+		#img-container {
+
+			.img {
+				.img-title {
+					
+					font-size:2.5em;
+
+				}
+			}
+		}
+
+	}
