@@ -1,3 +1,5 @@
+	$gold-hover: #d9b348;
+
 	html, body {
 		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -12,6 +14,15 @@
 		position: relative;
 		// background:#000;
 		// overflow: hidden;
+	}
+
+	a {
+
+		color:#fff;
+
+		&:hover {
+			color:$gold-hover;
+		}
 	}
 
 	#img-loader {
@@ -101,10 +112,10 @@
 			color: #fff;
 			top: 35%;
 			left: 50%;
-			width: 208px;
-			margin-left: -104px;
+			width: 250px;
+			margin-left: -125px;
 			text-align: center;
-			font-size: 5em;
+			font-size: 6em;
 
 		}
 
@@ -186,6 +197,8 @@ background-size: 1400% 1400%;
 			    	margin-top:0.6em;
 			    	font-size:20px;
 			    	display:block;
+			    	color:#fff;
+			    	text-transform:uppercse;
 			    }
 
 			  	&.show {
@@ -193,6 +206,15 @@ background-size: 1400% 1400%;
 			  	}
 
 		  	}
+
+			.underline {
+				text-decoration:underline;
+				margin-top:0.6em;
+				font-size:20px;
+				display:block;
+				color:#fff;
+				text-transform:uppercse;
+			}
 
 		  	.text-outer {
 				display: table;
@@ -232,7 +254,12 @@ background-size: 1400% 1400%;
 
 			}
 
+			
+
 			&.benchmark {
+
+				
+
 		  		.img-title {
 		  			font-size:1.5em;
 		  			opacity:0;
@@ -257,6 +284,95 @@ background-size: 1400% 1400%;
 		  	}
 
 		}
+
+		.final-text {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index:99999;
+
+				.bench-text {
+					font-size: 1.5em;
+					opacity: 1;
+					display: block;
+					text-transform: uppercase;
+					color: #fff;
+
+					-webkit-text-shadow:0 0 0.5px rgba(0, 0, 0, 0.4);
+				  	-moz-text-shadow:0 0 0.5px rgba(0, 0, 0, 0.4);
+				  	text-shadow:0 0 0.5px rgba(0, 0, 0, 0.4);
+				  	font-family:NeutraTextBold;
+				  	visibility:visible;
+
+				  	opacity:0;
+
+				  	-webkit-transition: opacity 1.2s ease-in-out;
+				    -moz-transition: opacity 1.2s ease-in-out;
+				    -ms-transition: opacity 1.2s ease-in-out;
+				    -o-transition: opacity 1.2s ease-in-out;
+
+				    span {
+				    	display:block;
+				    }
+
+				    text-align:center;
+				}
+
+				.couture-living {
+					position: fixed;
+					top: 37%;
+					left: 50%;
+					margin-left: -136.5px;
+
+				}
+
+				.invitation-only {
+					position: fixed;
+					display: block;
+					top: 37%;
+					left: 50%;
+					margin-left: -129px;
+				}
+
+				.underline {
+					position: fixed;
+					top: 50%;
+					left: 50%;
+					font-family: NeutraTextBold;
+					margin-left: -73px;
+					text-transform:uppercase;
+					opacity:0;
+					font-size:1.3em;
+				}
+			}
+
+		.final-text {
+  			display:none;
+
+  			.bench-text {
+	  			&.show-block {
+	  				display:block;
+	  				opacity:0;
+	  			}
+
+	  			&.show {
+	  				opacity:1;
+	  			}
+	  		}
+
+	  		.underline {
+	  			&.show-block {
+	  				display:block;
+	  				opacity:0;
+	  			}
+
+	  			&.show {
+	  				opacity:1 !important;
+	  			}
+	  		}
+  		}
 
 	}
 

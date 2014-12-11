@@ -81,11 +81,16 @@
 						<span class="i-name"></span>
 					</div>
 
-					<h1 class="img-title text-inner btitle-one"><span>The New Benchmark</span><span>of Couture Living</span></h1>
-
-					<h1 class="img-title text-inner btitle-two"><span>By Invitation Only</span> <span class="underline">enquire here</span></h1>
-
 				</div>
+			</div>
+
+			<div class="final-text">
+
+				<h1 class="bench-text couture-living"><span>The New Benchmark</span><span>of Couture Living</span></h1>
+
+				<h1 class="bench-text invitation-only"><span>By Invitation Only</span> </h1>
+
+				<a href="http://pavilion-suites.com/registration/" target="_blank" class="underline"> enquire here</a>
 			</div>
 
 		</section>
@@ -221,18 +226,33 @@
 
 						setTimeout(function () {
 
+							
 							$('.distinction .img-title').removeClass('show');
-							$('.benchmark .btitle-one').addClass('show-block').delay(1.2).addClass('show');
+							
 
 						}, 1000);
+
+						setTimeout(function () {
+
+							$('.final-text').show();
+							$('.final-text .couture-living').addClass('show-block').delay(1.2).addClass('show');
+
+						}, 2000);
 
 
 						setTimeout(function () {
 
-								$('.benchmark .btitle-one').removeClass('show').delay(1.2).removeClass('show-block');
-								$('.benchmark .btitle-two').addClass('show-block').delay(1.2).addClass('show');
+								$('.final-text .couture-living').removeClass('show').delay(1.2).removeClass('show-block');
+								$('.final-text .invitation-only').addClass('show-block').delay(1.2).addClass('show');
+								
 								
 						}, 4000);
+
+						setTimeout(function () {
+
+							$('.final-text .underline').addClass('show-block').delay(1.2).addClass('show');
+
+						}, 4500);
 
 					}, 16000);
 
@@ -244,7 +264,7 @@
 	</script>
 
 	<script>
-	
+
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
