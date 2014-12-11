@@ -31,9 +31,12 @@
 		
 		<section id="img-loader">
 			<div class="img-loader-container">
-				<div class="loading">
+				<!-- <div class="loading">
 					<div class="dot"></div>
 					<div class="dot2"></div>
+				</div> -->
+				<div class="loading-gif">
+					<img src="images/loader_gif.gif"/>
 				</div>
 				<h1>
 					Loading . . .
@@ -55,13 +58,13 @@
 				</div>
 			</div>
 			<div class="img car">
-		  		<img src="images/car.png" alt=""/>
+		  		<img src="images/car_2.jpg" alt=""/>
 		  		<div class="text-outer">
 		  			<h1 class="img-title text-inner ">Presitige</h1>
 		  		</div>
 			</div>
 			<div class="img luxury">
-				<img src="images/luxury.jpg" alt=""/>
+				<img src="images/luxury_2.jpg" alt=""/>
 				<div class="text-outer">
 		  			<h1 class="img-title text-inner ">Luxury</h1>
 		  		</div>
@@ -222,7 +225,7 @@
 
 							$('.benchmark .icon-pavilion').addClass('show');
 
-						}, 500);
+						}, 1000);
 
 						setTimeout(function () {
 
@@ -235,9 +238,15 @@
 						setTimeout(function () {
 
 							$('.final-text').show();
-							$('.final-text .couture-living').addClass('show-block').delay(1.2).addClass('show');
+							$('.final-text .couture-living').addClass('show-block');
 
 						}, 2000);
+
+						setTimeout(function () {
+
+							$('.final-text .couture-living').addClass('show');
+
+						}, 2500);
 
 
 						setTimeout(function () {
@@ -252,7 +261,7 @@
 
 							$('.final-text .underline').addClass('show-block').delay(1.2).addClass('show');
 
-						}, 4500);
+						}, 6000);
 
 					}, 16000);
 

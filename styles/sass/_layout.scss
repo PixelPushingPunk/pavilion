@@ -31,18 +31,22 @@
 		left:0;
 		bottom:0;
 		right:0;
-		background:#000;
+		background:#fff;
 		z-index:9999999;
 		display:block;
 		overflow:hidden;
 
 		.img-loader-container {
-			min-height:3000px
+			min-height:3000px;
+			padding-top: 200px;
 		}
 
 		h1 {
-			color:#fff;
-			text-align:center;
+			text-align: center;
+			margin-top: 0;
+			font-family: NeutraTextBold;
+			font-size: 1em;
+			color: #EB852A;
 		}
 	}
 
@@ -116,6 +120,11 @@
 			margin-left: -125px;
 			text-align: center;
 			font-size: 6em;
+
+			-webkit-transition: opacity 1s ease-in;
+		    -moz-transition: opacity 1s ease-in;
+		    -ms-transition: opacity 1s ease-in;
+		    -o-transition: opacity 1s ease-in;
 
 		}
 
@@ -276,10 +285,10 @@ background-size: 1400% 1400%;
 		  		}
 
 		  		img {
-		  			-webkit-transition:transform 5s linear;
-					-moz-transition:transform 5s linear;
-					-o-transition:transform 5s linear;
-		  			transition:transform 5s linear;
+		  			-webkit-transition:transform 7s linear;
+					-moz-transition:transform 7s linear;
+					-o-transition:transform 7s linear;
+		  			transition:transform 7s linear;
 		  		}
 		  	}
 
@@ -326,6 +335,11 @@ background-size: 1400% 1400%;
 					left: 50%;
 					margin-left: -136.5px;
 
+					-webkit-transition: opacity 1.2s ease-in-out;
+				    -moz-transition: opacity 1.2s ease-in-out;
+				    -ms-transition: opacity 1.2s ease-in-out;
+				    -o-transition: opacity 1.2s ease-in-out;
+
 				}
 
 				.invitation-only {
@@ -334,6 +348,11 @@ background-size: 1400% 1400%;
 					top: 37%;
 					left: 50%;
 					margin-left: -129px;
+
+					-webkit-transition: opacity 1.2s ease-in-out;
+				    -moz-transition: opacity 1.2s ease-in-out;
+				    -ms-transition: opacity 1.2s ease-in-out;
+				    -o-transition: opacity 1.2s ease-in-out;
 				}
 
 				.underline {
@@ -345,6 +364,11 @@ background-size: 1400% 1400%;
 					text-transform:uppercase;
 					opacity:0;
 					font-size:1.3em;
+
+					-webkit-transition: opacity 1.2s ease-in-out;
+				    -moz-transition: opacity 1.2s ease-in-out;
+				    -ms-transition: opacity 1.2s ease-in-out;
+				    -o-transition: opacity 1.2s ease-in-out;
 				}
 			}
 
@@ -374,5 +398,14 @@ background-size: 1400% 1400%;
 	  		}
   		}
 
+	}
+
+	.loading-gif {
+		max-width: 200px;
+		margin: 0 auto;
+
+		img {
+			width:100%;
+		}
 	}
 

@@ -5,6 +5,9 @@
 		#canvas {
 			width: 100%;
 		}
+
+
+		
 	}
 	@media screen and (orientation:portrait) {
 		#canvas {
@@ -45,4 +48,35 @@
 			}
 		}
 
+	}
+
+	@media only screen and (max-device-width: 1024px) and (orientation: landscape) {
+		.final-text {
+				.couture-living {
+					position: fixed;
+					top: 60%;
+					left: 50%;
+					margin-left: -136.5px;
+
+				}
+
+				.invitation-only {
+					position: fixed;
+					display: block;
+					top: 60%;
+					left: 50%;
+					margin-left: -129px;
+				}
+
+				.underline {
+					position: fixed;
+					top: 75%;
+					left: 50%;
+					font-family: NeutraTextBold;
+					margin-left: -73px;
+					text-transform:uppercase;
+					opacity:0;
+					font-size:1.3em;
+				}
+		}
 	}
